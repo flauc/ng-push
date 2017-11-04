@@ -1,0 +1,28 @@
+{
+  "name": "ng-push",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repo"
+  },
+  "author": {
+    "name": "Filip Lauc",
+    "email": "filip.lauc93@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo/issues"
+  },
+  "main": "ng-push.umd.js",
+  "module": "ng-push.js",
+  "jsnext:main": "ng-push.js",
+  "typings": "ng-push.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
