@@ -13,13 +13,14 @@ export class PushNotificationsService {
     this.permission  = this.isSupported() ? Notification.permission : 'denied';
   }
 
-  requestPermission() {
-    if ('Notification' in window)
-      Notification.requestPermission((status: any) => this.permission = status);
-  }
-
   isSupported() {
     return 'Notification' in window;
+  }
+
+  requestPermission() {
+    if ('Notification' in window) {
+      Notification.requestPermission((status: any) => this.permission = status);
+    }
   }
 
   create(title: string, options?: PushNotification): any {
