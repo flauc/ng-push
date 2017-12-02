@@ -76,6 +76,24 @@ interface PushNotification {
 Options correspond to the Notification interface of the Notification API:
 [Mozilla developer network](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
 
+## Examples
+
+### Registering to click event
+
+```ts
+this._pushNotifications.create(
+    'Example One',
+    {body: 'Just an example'}
+)
+    .subscribe(res => {
+        if (res.event.type === 'click') {
+            // You can do anything else here
+            res.notification.close();
+        }
+    }
+)
+```
+
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
