@@ -94,6 +94,33 @@ this._pushNotifications.create(
 )
 ```
 
+### Using with universal method one (using injector)
+
+Thank you [@anode7](https://github.com/anode7) for submitting this example
+
+```ts
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, Injector } from '@angular/core';
+import {isPlatformBrowser } from '@angular/common';
+
+@Component({})
+export class HomeView implements OnInit, OnDestroy {
+    private _push:PushNotificationsService;
+
+    constructor(
+        @Inject(PLATFORM_ID) platformId: string,
+        private injector: Injector,
+    ) {
+        if (isPlatformBrowser(platformId)) {
+            //inject service only on browser platform
+            this._push = this.injector.get(PushNotificationsService);
+        }
+    }
+```
+
+### Using with universal method two (mock service)
+
+A standard method used in Universal is creating a mock service which is injected in the `ServerModule`. A good example can be found [here](https://github.com/angular/universal-starter/issues/148).
+
 ## Development
 
 To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
