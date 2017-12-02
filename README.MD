@@ -99,11 +99,11 @@ this._pushNotifications.create(
 Thank you [@anode7](https://github.com/anode7) for submitting this example
 
 ```ts
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, Injector } from '@angular/core';
-import {isPlatformBrowser } from '@angular/common';
+import {Component, Inject, PLATFORM_ID, Injector} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({})
-export class HomeView implements OnInit, OnDestroy {
+export class ExampleComponent {
     private _push:PushNotificationsService;
 
     constructor(
@@ -115,6 +115,7 @@ export class HomeView implements OnInit, OnDestroy {
             this._push = this.injector.get(PushNotificationsService);
         }
     }
+}
 ```
 
 ### Using with universal method two (mock service)

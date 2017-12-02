@@ -1,4 +1,10 @@
 language: node_js
-sudo: false
+sudo: required
+os:
+  - linux
 node_js:
-- '4.2.1'
+  - '8.9.1'
+install:
+  - yarn install
+script:
+  - npm run build
