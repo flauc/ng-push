@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 import {PushNotification, Permission} from '../interfaces/push-notification.type';
 
 declare const Notification: any;
