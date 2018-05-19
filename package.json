@@ -4,13 +4,8 @@
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
-    "docs": "npm run docs:build",
-    "docs:build": "compodoc -p tsconfig.json -n ng-push -d docs --hideGenerator",
-    "docs:serve": "npm run docs:build -- -s",
-    "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "lite": "lite-server",
-    "publish": "nm run build && npm publish dist"
+    "publish": "npm run build && npm publish dist"
   },
   "repository": {
     "type": "git",
@@ -34,7 +29,6 @@
     "@angular/compiler": "^6.0.1",
     "@angular/compiler-cli": "^6.0.1",
     "@angular/core": "^6.0.1",
-    "@angular/http": "^6.0.1",
     "@angular/platform-browser": "^6.0.1",
     "@angular/platform-browser-dynamic": "^6.0.1",
     "@compodoc/compodoc": "1.0.0-beta.10",
