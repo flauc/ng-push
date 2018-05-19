@@ -1,6 +1,6 @@
 {
   "name": "ng-push",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/username/repo"
@@ -21,8 +21,8 @@
   "jsnext:main": "ng-push.js",
   "typings": "ng-push.d.ts",
   "peerDependencies": {
-    "@angular/core": "^5.0.0",
-    "rxjs": "^5.5.0",
+    "@angular/core": "^6.0.0",
+    "rxjs": "^6.0.0",
     "zone.js": "^0.8.4"
   }
 }
