@@ -43,7 +43,7 @@ To request permission from the user to display push notifications call the `requ
 You can create a notification calling the `create(title: string, options: PushNotification)` method, like this: 
 
 ```ts
-this._push.create('Test', {body: 'something'}).subscribe(
+this._pushNotifications.create('Test', {body: 'something'}).subscribe(
             res => console.log(res),
             err => console.log(err)
         )
