@@ -18,7 +18,7 @@ $ npm install ng-push --save
 
 ## Setup
 
-Import the `PushNotificationsModule` in to your `AppModule`
+Import the `PushNotificationsModule` in to your `AppModule`:
 ```ts
 @NgModule({
     imports: [PushNotificationsModule],
@@ -40,10 +40,10 @@ To request permission from the user to display push notifications call the `requ
 
 ## Create Notification
 
-You can create a permission calling the `create(title: string, options: PushNotification)` method, like this: 
+You can create a notification calling the `create(title: string, options: PushNotification)` method, like this: 
 
 ```ts
-this._push.create('Test', {body: 'something'}).subscribe(
+this._pushNotifications.create('Test', {body: 'something'}).subscribe(
             res => console.log(res),
             err => console.log(err)
         )
